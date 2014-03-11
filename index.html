@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>Android2Arduino by solotsopa</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Android2Arduino</h1>
+        <h2>Connect Android with Arduino...</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/solotsopa/Android2Arduino/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/solotsopa/Android2Arduino/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/solotsopa/Android2Arduino" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h3>
+<a name="welcome-to-android-2-arduino" class="anchor" href="#welcome-to-android-2-arduino"><span class="octicon octicon-link"></span></a>Welcome to Android 2 Arduino</h3>
+
+<p>This is an Android-Processing-Arduino application which makes a connection between an Android device and an Arduino using a server. The Android application creates a client socket in order to connect with the server and send some data which are taken from the accelerometer sensor of the device. The server is written in Processing language and creates a server socket which accepts all client socket calls and forwards the incoming messages to the Serial port. The Arduino application reads the values from the Serial port and does all some fancy things!
+(<em>This application does not require to have any bluetooth or wifi accessory!</em>)</p>
+
+<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+
+<h3>
+<a name="android-application" class="anchor" href="#android-application"><span class="octicon octicon-link"></span></a>Android Application</h3>
+
+<p>The Android application connects to a server (in a computer) and sends some values. It created in order to make a connection between an Android device and an Arduino using a server. This application creates a socket and makes the connection with the server and sends some data which are taken from the accelerometer sensor of the device. If the user tilts (or shakes) the phone to the left the application sends a '1' to the server and if the user tilts the phone to the right the application sends a '0' to the server.</p>
+
+<h3>
+<a name="processing-application" class="anchor" href="#processing-application"><span class="octicon octicon-link"></span></a>Processing Application</h3>
+
+<p>The Processing application is the "MeddleMan" to connect an Android device with the Arduino through the WiFi connection. It uses a Server Socket in order to let the Android device to communicate with it forwards the incoming message to the Serial port of the computer which is connected to the Arduino.</p>
+
+<h3>
+<a name="arduino-application" class="anchor" href="#arduino-application"><span class="octicon octicon-link"></span></a>Arduino Application</h3>
+
+<p>The Arduino application takes some values from the Serial port and do different things depending on the values.</p>
+
+<blockquote>
+<p><em>Arduino Connection</em>
+<img src="https://raw.github.com/solotsopa/Android2Arduino/master/Arduino/arduino.png" alt="Arduino Connection"></p>
+</blockquote>
+
+<h3>
+<a name="troubleshooting" class="anchor" href="#troubleshooting"><span class="octicon octicon-link"></span></a>Troubleshooting</h3>
+
+<p>The Arduino and Processing applications are connected to each other with Serial port. In order to the Processing application be connected to the correct port you have to change the port list array to the one that you connect the Arduino in your computer.</p>
+
+<blockquote>
+<p><em>Processing App</em></p>
+
+<hr>
+<p><code>int mySerialPortList = 0;</code><br><code>String portName = Serial.list()[mySerialPortList];</code></p>
+
+<hr>
+</blockquote>
+
+<h3>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>This project contains three applications (Android - Processing - Arduino) and all of them are created and designed by Apostolos Siokas (<a href="https://github.com/solotsopa" class="user-mention">@solotsopa</a>)</p>
+
+<h3>
+<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>For everything you can reach me at <a href="mailto:apostolossiokas@gmail.com">apostolossiokas@gmail.com</a></p>
+      </section>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-28752364-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
