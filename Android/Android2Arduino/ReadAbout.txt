@@ -1,0 +1,11 @@
+This is an Android application which connects to a server (in a computer) and sends some values.
+It created in order to make a connection between an Android device and an Arduino using a server.
+This application creates a socket and makes the connection with the server and sends some data
+which are taken from the accelerometer sensor of the device.
+If the user tilts (or shakes) the phone to the left the application sends a '1' to the server
+and if the user tilts the phone to the right the application sends a '0' to the server.
+The server's job is to forward this message to the Arduino in order to establish the connection
+between the Android device and Arduino.
+ 
+   This application is Created and Designed by
+   Apostolos Siokas
